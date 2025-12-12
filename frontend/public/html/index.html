@@ -6,90 +6,91 @@
     <title>Salitang-Ina</title>
     <link rel="stylesheet" href="../css/homepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p style="color: red; font-size: 40px;">TEST TEXT</p>
     <header>
-        <img src="salitangina/frontend/assets/logologo.png">
-        <h1 id="main-title">SALITANG INA</h1>
-        <p>LOG IN</p>
-        <p>UPDATE</p>
+        <div class="left-header">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmVq-OmHL5H_5P8b1k306pFddOe3049-il2A&s">
+            <h1 id="main-title">SALITANG-INA</h1>
+        </div>
+        <div class="right-header">
+            <p>LOG IN</p>
+            <p>UPDATE</p>
+        </div>
     </header>
     <nav class="ribbon">
-        <ul>
-            <li>
-                <a href="#">Mga Kategorya</a>
-                <ul class="dropdown">
-                    <li><a href="#">Wika</a></li>
-                    <li><a href="#">Matematika</a></li>
-                    <li><a href="#">Agham</a></li>
-                    <li><a href="#">Makataong Agham</a></li>
-                    <li><a href="#">Sikolohiya</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Mag-browse</a>
-                <ul class="dropdown">
-                    <li><a href="#">Mga Likha</a></li>
-                    <li><a href="#">Tags</a></li>
-                    <li><a href="#">Bookmarks</a></li>
-                    <li><a href="#">Mga Koleksyon</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Maghanap</a>
-                <ul class="dropdown">
-                    <li><a href="#">Mga Likha</a></li>
-                    <li><a href="#">Tags</a></li>
-                    <li><a href="#">Bookmarks</a></li>
-                    <li><a href="#">Mga May-Akda</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Tungkol</a>
-                <ul class="dropdown">
-                    <li><a href="#">Tungkol Sa Amin</a></li>
-                    <li><a href="#">Balita</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Mga Alituntunin</a></li>
-                    <li><a href="#">Mag-donate</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <form class="search-form">
-            <input type="text" placeholder="Maghanap...">
-            <button type="submit">Hanapin</button>
-        </form>
-    </nav>
-    <aside class="left-sidebar">
-        <h2>Mga Kagamitan</h2>
-        <hr>
-        <ul>
-            <li><a href="#">Bookmarks</a></li>
-            <li><a href="#">Kasalukuyang Binabasa</a></li>
-            <li><a href="#">Anotasyon</a></li>
-            <li><a href="#">AI Tools</a></li>
-        </ul>
-        <h2>Mga Bagong Dinagdag</h2>
-        <hr>
-    </aside>
-    <aside class="right-sidebar">
-        <article class="right-content" id="description">
-            <h3>DESKRIPSYON</h3>
-            <div class="right-textbox">
-                <p>Ang SalitangIna ay isang makabagong plataporma para sa maka-Pilipinong pananaliksik. Dito, maaaring mag-upload at magbahagi ng pag-aaral ang mga iskolar, guro, estudyante, at iba pang mananaliksik mula sa iba’t ibang panig ng bansa. Layunin nitong palaganapin ang kulturang pananaliksik na nakaugat sa kaalamang Pilipino at magbigay ng madaling akses sa mapagkakatiwalaang sanggunian. Sa pamamagitan ng SalitangIna, nabibigyan ng espasyo ang lokal na pananaliksik at napapalakas ang kooperasyon at palitan ng kaalaman sa iba’t ibang larangan.</p>
-            </div>
-        </article>
-                <article class="right-content" id="researchers">
-            <h3>MGA MANANALIKSIK</h3>
-            <div class="right-textbox">
-                <p>Testing testing 123 testing</p>
-            </div>
-        </article>
-    </aside>
+        <div class="dropdowns">
+            <ul>
+                <li>
+                    <a href="#" class="dropdown-category">Mga Kategorya</a>
+                    <ul class="dropdown" id="kategorya">
+                        <li class="dropdown-item"><a href="#">Wika</a></li>
+                        <li class="dropdown-item"><a href="#">Matematika</a></li>
+                        <li class="dropdown-item"><a href="#">Agham</a></li>
+                        <li class="dropdown-item"><a href="#">Makataong Agham</a></li>
+                        <li class="dropdown-item"><a href="#">Sikolohiya</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-category">Mag-browse</a>
+                    <ul class="dropdown" id="browse">
+                        <li class="dropdown-item"><a href="#">Mga Likha</a></li>
+                        <li class="dropdown-item"><a href="#">Tags</a></li>
+                        <li class="dropdown-item"><a href="#">Bookmarks</a></li>
+                        <li class="dropdown-item"><a href="#">Mga May-Akda</a></li>
+                        <li class="dropdown-item"><a href="#">Mga Koleksyon</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-category">Tungkol</a>
+                    <ul class="dropdown" id="tungkol">
+                        <li class="dropdown-item"><a href="#">Tungkol Sa Amin</a></li>
+                        <li class="dropdown-item"><a href="#">Balita</a></li>
+                        <li class="dropdown-item"><a href="#">FAQ</a></li>
+                        <li class="dropdown-item"><a href="#">Mga Alituntunin</a></li>
+                        <li class="dropdown-item"><a href="#">Mag-donate</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     
+        <div class="searchbar">
+            <form class="search-form">
+                <input type="text">
+                <button type="submit">Hanapin</button>
+            </form>
+        </div>
+    </nav>
+        <div class="main-content">
+        <aside class="left-sidebar">
+            <h2>Mga Kagamitan</h2>
+            <hr>
+            <ul>
+                <li><a href="#"><span>Bookmarks</span></a></li>
+                <li><a href="#"><span>Kasalukuyang Binabasa</span></a></li>
+                <li><a href="#"><span>Anotasyon</span></a></li>
+                <li><a href="#"><span>AI Tools</span></a></li>
+            </ul>
+            <h2 id="Dinagdag">Mga Bagong Dinagdag</h2>
+            <hr>
+        </aside>
+        <aside class="right-sidebar">
+            <article class="right-content" id="description">
+                <h3>DESKRIPSYON</h3>
+                <div class="right-textbox">
+                    <p>Ang SalitangIna ay isang makabagong plataporma para sa maka-Pilipinong pananaliksik. Dito, maaaring mag-upload at magbahagi ng pag-aaral ang mga iskolar, guro, estudyante, at iba pang mananaliksik mula sa iba’t ibang panig ng bansa. Layunin nitong palaganapin ang kulturang pananaliksik na nakaugat sa kaalamang Pilipino at magbigay ng madaling akses sa mapagkakatiwalaang sanggunian. Sa pamamagitan ng SalitangIna, nabibigyan ng espasyo ang lokal na pananaliksik at napapalakas ang kooperasyon at palitan ng kaalaman sa iba’t ibang larangan.</p>
+                </div>
+            </article>
+                    <article class="right-content" id="researchers">
+                <h3>MGA MANANALIKSIK</h3>
+                <div class="right-textbox">
+                    <p>Testing testing 123 testing</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quae ea ex repellendus beatae facilis voluptatem nam eaque deserunt fuga quisquam debitis vero voluptates odit tempora, itaque omnis, praesentium dolor minus necessitatibus consequatur, cumque eius. Natus quae vitae deserunt veritatis dolorem. Itaque saepe cum, repellendus ex, minima libero alias pariatur nihil sed sint eos atque eum quaerat voluptatem voluptatibus, tenetur quod commodi quae eius. Aut officiis, ipsa laudantium, possimus ratione accusantium recusandae cumque in, veritatis nulla quam natus ducimus est aliquid. Dolor accusamus distinctio adipisci quod suscipit sed id nam nihil repudiandae recusandae deserunt laudantium ad explicabo, odio cum voluptatem!</p>
+                </div>
+            </article>
+        </aside>
+    </div>
 </body>
 </html>
