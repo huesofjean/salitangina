@@ -1,11 +1,39 @@
 * {
-    background-color: pink;
+    margin: 0;
+    padding: 0;
 }
 
-.aclonica-regular {
-  font-family: "Aclonica", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+header {
+    color: #BFA47B;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* you can increase this if you want bigger gaps */
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    gap: 50px;
+}
+
+.left-header img {
+    height: 99px;
+    width: 140px;
 }
 
 #main-title {
@@ -15,4 +43,189 @@
     font-size: 64px;
     line-height: 73px;
     font-style: normal;
+    vertical-align: middle;
+}
+
+
+.ribbon {
+    background-color: #BFA47B;
+    width: 100%;
+    height: 51px;
+    padding: 1px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+}
+
+.ribbon ul {
+    list-style: none;
+    position: relative;
+    color: #fff;
+    
+}
+
+.ribbon ul li {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    
+}
+
+#kategorya, #browse, #tungkol {
+    width: 200px;
+}
+
+.ribbon ul li a {
+    display: block;
+    padding: 5px 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFF;
+    font-style: "Kadwa", Times, serif;
+    text-decoration: none;
+}
+
+
+.ribbon ul li ul.dropdown li.dropdown-item{
+    display: block;
+    border-bottom: 3px solid #72727236;
+    padding: 2px;
+}
+
+.ribbon ul li ul.dropdown li.dropdown-item a {
+    color: #000;
+    font-weight: 400;
+    text-align: left;
+}
+
+
+.ribbon ul li ul.dropdown{
+    width: 50px;
+    background-color: #d6d5d2;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    color: #000;
+}
+
+.ribbon ul li a:hover {
+    background-color: #a7a7a7;
+    color: #000;
+}
+
+.ribbon ul li:hover ul.dropdown {
+    display: block;
+}
+
+.dropdown-item {
+    color: #000;
+}
+
+.dropdown-category {
+    font-family: 'Kadwa';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color: #fff;
+}
+
+.ribbon form {
+    margin-left: auto;
+    margin-right: 50px;
+    size: 65px;
+}
+
+.ribbon form input {
+    width: 298px;
+    border-radius: 45px;
+    padding: 10px;
+}
+
+.ribbon form button {
+    width: 135px;
+    margin-left: 15px;
+    size: 26px;
+    padding: 2px;
+    font-size: 24px;
+    border-radius: 5%;
+    font-weight: 400;
+    background-color:#FFF;
+    color: #BFA47B;
+    font-style: "Kadwa", Times, serif;
+    border: 1px solid #00000094;
+    vertical-align: middle;
+}
+
+.ribbon form button:hover {
+    background-color:#d3d3d3;
+    color: #181716;
+}
+
+
+
+
+
+/* MAIN CONTENT */
+
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 30px;
+}
+
+
+
+.left-sidebar {
+    width: 50%;
+    min-width: 250px;
+}
+
+.left-sidebar h2 {
+    font-family: "Alike Angular", serif;
+    font-weight: normal;
+}
+
+.left-sidebar hr {
+    width: 438px;
+}
+
+.left-sidebar ul {
+    margin-left: 20px;
+}
+
+.left-sidebar li a{
+    margin-top: 10px;
+    font-family: "Kadwa", serif;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #000;
+    text-decoration: none;
+}
+
+.left-sidebar #Dinagdag {
+    margin-top: 50px;
+}
+
+.right-sidebar {
+    flex: 1;
+    margin-left: 20px;
+    font-family: "Kadwa", serif;
+}
+
+.right-sidebar h3 {
+    font-family: "Kadwa", serif;
+    font-weight: bold;
+}
+
+.right-textbox {
+    size: 670px;
+    background-color: #d6d5d2;
+    padding: 8px;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
