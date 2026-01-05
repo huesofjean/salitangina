@@ -6,11 +6,7 @@
 header {
     color: #BFA47B;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-}
-
-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,64 +42,62 @@ header {
     vertical-align: middle;
 }
 
-
 .ribbon {
     background-color: #BFA47B;
     width: 100%;
-    height: 51px;
-    padding: 1px;
-    flex-wrap: wrap;
+    min-height: 3.2rem;          /* ~51px */
+    padding: 0.1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;    
 }
 
 .ribbon ul {
     list-style: none;
     position: relative;
     color: #fff;
-    
 }
 
 .ribbon ul li {
     display: inline-block;
     position: relative;
     color: #fff;
-    
 }
 
-#kategorya, #browse, #tungkol {
-    width: 200px;
+/* dropdown widths scale with text size */
+#kategorya,
+#browse,
+#tungkol {
+    width: 12.5rem;              /* ~200px */
 }
 
 .ribbon ul li a {
     display: block;
-    padding: 5px 25px;
+    padding: 0.3rem 1.5rem;      /* ~5px 25px */
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;          /* ~20px */
     font-weight: 400;
-    color: #FFF;
-    font-style: "Kadwa", Times, serif;
+    color: #fff;
+    font-family: "Kadwa", Times, serif;
     text-decoration: none;
 }
 
-
-.ribbon ul li ul.dropdown li.dropdown-item{
+.ribbon ul li ul.dropdown li.dropdown-item {
     display: block;
-    border-bottom: 3px solid #72727236;
-    padding: 2px;
+    border-bottom: 0.2rem solid #72727236;
+    padding: 0.15rem;
 }
 
 .ribbon ul li ul.dropdown li.dropdown-item a {
     color: #000;
     font-weight: 400;
     text-align: left;
+    font-size: 1rem;
 }
 
-
-.ribbon ul li ul.dropdown{
-    width: 50px;
+.ribbon ul li ul.dropdown {
+    width: 100%;
     background-color: #d6d5d2;
     position: absolute;
     z-index: 999;
@@ -120,49 +114,47 @@ header {
     display: block;
 }
 
-.dropdown-item {
-    color: #000;
-}
-
 .dropdown-category {
-    font-family: 'Kadwa';
+    font-family: 'Kadwa', serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 0.95rem;          /* ~15px */
     color: #fff;
 }
 
+/* search area */
 .ribbon form {
     margin-left: auto;
-    margin-right: 50px;
-    size: 65px;
+    margin-right: 3vw;
 }
 
 .ribbon form input {
-    width: 298px;
-    border-radius: 45px;
-    padding: 10px;
+    width: 18vw;
+    min-width: 12rem;
+    max-width: 20rem;
+    border-radius: 3rem;
+    padding: 0.6rem;
 }
 
 .ribbon form button {
-    width: 135px;
-    margin-left: 15px;
-    size: 26px;
-    padding: 2px;
-    font-size: 24px;
-    border-radius: 5%;
+    width: 8.5rem;
+    margin-left: 1rem;
+    padding: 0.2rem;
+    font-size: 1.4rem;
+    border-radius: 0.4rem;
     font-weight: 400;
-    background-color:#FFF;
+    background-color: #fff;
     color: #BFA47B;
-    font-style: "Kadwa", Times, serif;
-    border: 1px solid #00000094;
+    font-family: "Kadwa", Times, serif;
+    border: 0.08rem solid #00000094;
     vertical-align: middle;
 }
 
 .ribbon form button:hover {
-    background-color:#d3d3d3;
+    background-color: #d3d3d3;
     color: #181716;
 }
+
 
 
 
