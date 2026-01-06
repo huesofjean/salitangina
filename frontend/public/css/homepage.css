@@ -101,7 +101,7 @@ header {
     min-width: 180px;
     display: none;
     flex-direction: column;
-    padding: 0.5rem 0;
+    padding: 0 0;
     z-index: 999;
     border-radius: 5px;
 }
