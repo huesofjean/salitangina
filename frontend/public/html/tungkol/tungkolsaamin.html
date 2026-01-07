@@ -3,57 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff9500 0%, #ff6b35 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 500px;
-        }
-        h1 {
-            color: #ff9500;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 30px;
-            background: #ff9500;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .button:hover {
-            background: #ff6b35;
-        }
-    </style>
+    <title>Tungkol Sa Amin | Salitang-Ina</title>
+
+    <!-- CSS (same stylesheet) -->
+    <link rel="stylesheet" href="../../css/homepage.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome!</h1>
-        <p>Oranges are a vibrant and nutritious citrus fruit packed with vitamin C. Known for their bright orange color and sweet taste, oranges are enjoyed worldwide as a refreshing snack or juice. They're rich in fiber, antioxidants, and essential nutrients that support immune health and overall wellness.</p>
-        <a href="#" class="button">Get Started</a>
+
+<header>
+    <div class="left-header">
+    <a href="../index.html" class="home-link">
+        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmVq-OmHL5H_5P8b1k306pFddOe3049-il2A&s" alt="Logo">
+        <h1 id="main-title">SALITANG-INA</h1>
+    </a>
+</div>
+    <div class="right-header">
+        <a href="#">LOG IN</a>
+        <a href="#">UPDATE</a>
     </div>
+</header>
+
+<nav class="ribbon">
+    <ul class="dropdowns">
+        <li class="dropdown-wrapper">
+            <a href="#" class="dropdown-category">Mga Kategorya</a>
+            <ul class="dropdown">
+                <li><a href="#">Wika</a></li>
+                <li><a href="#">Matematika</a></li>
+                <li><a href="#">Agham</a></li>
+                <li><a href="#">Makataong Agham</a></li>
+                <li><a href="#">Sikolohiya</a></li>
+            </ul>
+        </li>
+        <li class="dropdown-wrapper">
+            <a href="#" class="dropdown-category">Mag-browse</a>
+            <ul class="dropdown">
+                <li><a href="#">Mga Likha</a></li>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Bookmarks</a></li>
+                <li><a href="#">Mga May-Akda</a></li>
+                <li><a href="#">Mga Koleksyon</a></li>
+            </ul>
+        </li>
+        <li class="dropdown-wrapper">
+            <a href="#" class="dropdown-category">Tungkol</a>
+            <ul class="dropdown">
+                <li><a href="#">Tungkol Sa Amin</a></li>
+                <li><a href="#">Balita</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Mga Alituntunin</a></li>
+                <li><a href="#">Mag-donate</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <form class="search-form">
+        <input type="text" placeholder="Hanapin...">
+        <button type="submit">Hanapin</button>
+    </form>
+</nav>
+
+<div class="main-content">
+    <aside class="left-sidebar">
+        <h2>Tungkol</h2>
+        <hr>
+        <ul>
+            <li><a href="#">Misyon</a></li>
+            <li><a href="#">Bisyon</a></li>
+            <li><a href="#">Mga Tagapagtatag</a></li>
+            <li><a href="#">Makipag-ugnayan</a></li>
+        </ul>
+    </aside>
+
+    <aside class="right-sidebar">
+        <article class="right-content">
+            <h3>TUNGKOL SA AMIN</h3>
+            <div class="right-textbox">
+                <p>
+                    Ang <strong>Salitang-Ina</strong> ay itinatag upang magsilbing bukás at
+                    mapagkakatiwalaang plataporma para sa pananaliksik na nakaugat sa
+                    wikang Pilipino at karanasang lokal.
+                </p>
+
+                <p>
+                    Nilalayon nitong bigyang-lakas ang mga iskolar, guro, at mag-aaral
+                    sa pamamagitan ng pagbibigay ng espasyo kung saan maaaring
+                    maipamahagi, masuri, at mapalalim ang kaalamang makabayan.
+                </p>
+            </div>
+        </article>
+    </aside>
+</div>
+
+<script>
+    const dropdownWrappers = document.querySelectorAll('.dropdown-wrapper');
+    dropdownWrappers.forEach(wrapper => {
+        const link = wrapper.querySelector('.dropdown-category');
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.toggle('active');
+        });
+    });
+</script>
+
 </body>
 </html>
