@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Salitang-Ina</title>
+
+    <!-- Shared fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Homepage styles (header + ribbon reuse) -->
+    <link rel="stylesheet" href="../../css/homepage.css">
+    <!-- Login-only styles -->
+    <link rel="stylesheet" href="../../css/login/login.css">
+</head>
+<body>
+
+<header>
+    <div class="left-header">
+        <a href="../index.html" class="home-link">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmVq-OmHL5H_5P8b1k306pFddOe3049-il2A&s" alt="Logo">
+            <h1 id="main-title">SALITANG-INA</h1>
+        </a>
+    </div>
+    <div class="right-header">
+        <a href="#">LOG IN</a>
+        <a href="#">SIGN UP</a>
+    </div>
+</header>
+
+<nav class="ribbon">
+    <ul class="dropdowns">
+        <li><a href="../index.html" class="dropdown-category">Bumalik sa Home</a></li>
+    </ul>
+</nav>
+
+<main class="login-wrapper">
+    <section class="login-card">
+        <h2>Mag-log In</h2>
+
+        <form class="login-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@email.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••" required>
+
+            <button type="submit">Log In</button>
+        </form>
+
+        <p class="login-footer">
+            Wala pang account? <a href="#">Mag-sign up</a>
+        </p>
+    </section>
+</main>
+
+</body>
+</html>

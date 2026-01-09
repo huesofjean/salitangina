@@ -1,0 +1,115 @@
+/* =========================
+   LOGIN PAGE LAYOUT
+   ========================= */
+.login-wrapper {
+    position: relative; /* allows ::before */
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden; /* contains background */
+}
+
+/* Background image (main area only) */
+.login-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../../assets/librarybg.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    opacity: 0.45; /* adjust 0.2–0.5 */
+    z-index: 0;
+}
+
+/* =========================
+   LOGIN CARD
+   ========================= */
+.login-card {
+    position: relative; /* keeps card above bg */
+    z-index: 1;
+    background-color: #d6d5d2;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* TITLE */
+.login-card h2 {
+    font-family: "Alike Angular", serif;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   FORM
+   ========================= */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.login-form label {
+    font-size: 0.95rem;
+}
+
+.login-form input {
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.6rem;
+    border: 1px solid #aaa;
+    font-family: 'Kadwa', serif;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #BFA47B;
+}
+
+/* BUTTON */
+.login-form button {
+    margin-top: 1rem;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.8rem;
+    background-color: #BFA47B;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #a79068;
+}
+
+/* =========================
+   FOOTER TEXT
+   ========================= */
+.login-footer {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 500px) {
+    .login-card {
+        padding: 1.5rem;
+    }
+}
