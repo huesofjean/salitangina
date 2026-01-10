@@ -10,90 +10,123 @@
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="left-header">
-        <a href="index.html" class="home-link">
-        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmVq-OmHL5H_5P8b1k306pFddOe3049-il2A&s" alt="Logo">
-        <h1 id="main-title">SALITANG-INA</h1>
-    </a>
-</div>
-        <div class="right-header">
-            <a href="login/login.html">LOG IN</a>
-            <a href="#">SIGN UP</a>
-        </div>
-    </header>
-
-    <nav class="ribbon">
-        <ul class="dropdowns">
-            <li class="dropdown-wrapper">
-                <a href="#" class="dropdown-category">Mga Kategorya</a>
-                <ul class="dropdown" id="kategorya">
-                    <li><a href="#">Wika</a></li>
-                    <li><a href="#">Matematika</a></li>
-                    <li><a href="#">Agham</a></li>
-                    <li><a href="#">Makataong Agham</a></li>
-                    <li><a href="#">Sikolohiya</a></li>
-                </ul>
-            </li>
-            <li class="dropdown-wrapper">
-                <a href="#" class="dropdown-category">Mag-browse</a>
-                <ul class="dropdown" id="browse">
-                    <li><a href="#">Mga Likha</a></li>
-                    <li><a href="#">Tags</a></li>
-                    <li><a href="#">Bookmarks</a></li>
-                    <li><a href="#">Mga May-Akda</a></li>
-                    <li><a href="#">Mga Koleksyon</a></li>
-                </ul>
-            </li>
-            <li class="dropdown-wrapper">
-                <a href="#" class="dropdown-category">Tungkol</a>
-                <ul class="dropdown" id="tungkol">
-                    <li><a href="tungkol/tungkolsaamin.html">Tungkol Sa Amin</a></li>
-                    <li><a href="tungkol/FAQ.html">FAQ</a></li>
-                    <li><a href="tungkol/Alituntunin.html">Mga Alituntunin</a></li>
-                    <li><a href="tungkol/Donate.html">Mag-donate</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <form class="search-form">
-            <input type="text" placeholder="Hanapin...">
-            <button type="submit">Hanapin</button>
-        </form>
-    </nav>
-
-    <div class="main-content">
-        <aside class="left-sidebar">
-            <h2>Mga Kagamitan</h2>
-            <hr>
-            <ul>
-                <li><a href="#">Bookmarks</a></li>
-                <li><a href="#">Kasalukuyang Binabasa</a></li>
-                <li><a href="#">Anotasyon</a></li>
-                <li><a href="#">AI Tools</a></li>
-            </ul>
-            <h2 id="Dinagdag">Mga Bagong Dinagdag</h2>
-            <hr>
-        </aside>
-
-        <aside class="right-sidebar">
-            <article class="right-content" id="description">
-                <h3>DESKRIPSYON</h3>
-                <div class="right-textbox">
-                    <p>Ang SalitangIna ay isang makabagong plataporma para sa maka-Pilipinong pananaliksik. Dito, maaaring mag-upload at magbahagi ng pag-aaral ang mga iskolar, guro, estudyante, at iba pang mananaliksik mula sa iba’t ibang panig ng bansa. Layunin nitong palaganapin ang kulturang pananaliksik na nakaugat sa kaalamang Pilipino at magbigay ng madaling akses sa mapagkakatiwalaang sanggunian.</p>
-                </div>
-            </article>
-
-            <article class="right-content" id="researchers">
-                <h3>MGA MANANALIKSIK</h3>
-                <div class="right-textbox">
-                    <p>Testing testing 123 testing</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quae ea ex repellendus beatae facilis voluptatem nam eaque deserunt fuga quisquam debitis vero voluptates odit tempora, itaque omnis, praesentium dolor minus necessitatibus consequatur.</p>
-                </div>
-            </article>
-        </aside>
+    <div class="wrapper">
+        <header>
+            <div class="left-header">
+            <a href="index.html" class="home-link">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmVq-OmHL5H_5P8b1k306pFddOe3049-il2A&s" alt="Logo">
+            <h1 id="main-title">SALITANG-INA</h1>
+        </a>
     </div>
+            <div class="right-header">
+                <a href="login/login.html">LOG IN</a>
+                <a href="login/signup.html">SIGN UP</a>
+            </div>
+        </header>
 
+        <nav class="ribbon">
+            <ul class="dropdowns">
+                <li class="dropdown-wrapper">
+                    <a href="#" class="dropdown-category">Mga Kategorya</a>
+                    <ul class="dropdown" id="kategorya">
+                        <li><a href="#">Wika</a></li>
+                        <li><a href="#">Matematika</a></li>
+                        <li><a href="#">Agham</a></li>
+                        <li><a href="#">Makataong Agham</a></li>
+                        <li><a href="#">Sikolohiya</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-wrapper">
+                    <a href="#" class="dropdown-category">Mag-browse</a>
+                    <ul class="dropdown" id="browse">
+                        <li><a href="#">Mga Likha</a></li>
+                        <li><a href="#">Tags</a></li>
+                        <li><a href="#">Bookmarks</a></li>
+                        <li><a href="#">Mga May-Akda</a></li>
+                        <li><a href="#">Mga Koleksyon</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-wrapper">
+                    <a href="#" class="dropdown-category">Tungkol</a>
+                    <ul class="dropdown" id="tungkol">
+                        <li><a href="tungkol/tungkolsaamin.html">Tungkol Sa Amin</a></li>
+                        <li><a href="tungkol/FAQ.html">FAQ</a></li>
+                        <li><a href="tungkol/Alituntunin.html">Mga Alituntunin</a></li>
+                        <li><a href="tungkol/Donate.html">Mag-donate</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="search-form">
+                <input type="text" placeholder="Hanapin...">
+                <button type="submit">Hanapin</button>
+            </form>
+        </nav>
+
+        <div class="main-content">
+            <aside class="left-sidebar">
+                <h2>Mga Kagamitan</h2>
+                <hr>
+                <ul>
+                    <li><a href="#">Bookmarks</a></li>
+                    <li><a href="#">Kasalukuyang Binabasa</a></li>
+                    <li><a href="#">Anotasyon</a></li>
+                    <li><a href="#">AI Tools</a></li>
+                </ul>
+                <h2 id="Dinagdag">Mga Bagong Dinagdag</h2>
+                <hr>
+            </aside>
+
+            <aside class="right-sidebar">
+                <article class="right-content" id="description">
+                    <h3>DESKRIPSYON</h3>
+                    <div class="right-textbox">
+                        <p>Ang SalitangIna ay isang makabagong plataporma para sa maka-Pilipinong pananaliksik. Dito, maaaring mag-upload at magbahagi ng pag-aaral ang mga iskolar, guro, estudyante, at iba pang mananaliksik mula sa iba’t ibang panig ng bansa. Layunin nitong palaganapin ang kulturang pananaliksik na nakaugat sa kaalamang Pilipino at magbigay ng madaling akses sa mapagkakatiwalaang sanggunian.</p>
+                    </div>
+                </article>
+
+                <article class="right-content" id="researchers">
+                    <h3>MGA MANANALIKSIK</h3>
+                    <div class="right-textbox">
+                        <p>Testing testing 123 testing</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quae ea ex repellendus beatae facilis voluptatem nam eaque deserunt fuga quisquam debitis vero voluptates odit tempora, itaque omnis, praesentium dolor minus necessitatibus consequatur.</p>
+                    </div>
+                </article>
+            </aside>
+        </div>
+    </div>  
+    <footer>
+        <div class="footer-content">
+            <div class="coder">
+                <h4>Mga Programmer</h4>
+                <ul class="names">
+                    <li>Brian Ezekiel Vitan</li>
+                    <li>Johnzel Isaiah Zamora</li>
+                </ul>
+            </div>
+            <div class="designer">
+                <h4>Mga Designer</h4>
+                <ul class="names">
+                    <li>Nina Amanda Ramon</li>
+                    <li>Janna Danelle Ramirez</li>
+                </ul>
+            </div>
+            <div class="researcher">
+                <h4>Mga Mananaliksik</h4>
+                <ul class="names">
+                    <li>Dana Isabelle Agapay</li>
+                    <li>Madison Lee Bascuguin</li>
+                    <li>Nina Amanda Ramon</li>
+                    <li>Janna Danelle Ramirez</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4><a href="#"><b>Makipag-ugnayan sa amin</b></a></h4>
+                <h4><a href="#"><b>Mga Tuntunin at Kundisyon</b></a></h4>
+                <h4><a href="#"><b>Mga Puna at Mungkahi</b></a></h4>
+            </div>
+        </div>
+    </footer>
     <!-- Tap-friendly dropdown JS -->
     <script>
         // Only on small screens
