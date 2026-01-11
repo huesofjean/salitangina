@@ -4,6 +4,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
 
 // =========================
+// IMPORT FIREBASE CONFIG
+// =========================
+import { firebaseConfig } from './config.js';  // <-- ignored, contains secrets
+
+// =========================
 // FIREBASE AUTH
 // =========================
 import {
@@ -14,84 +19,156 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
-// (Optional) Analytics
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+// =========================
+// FIRESTORE
+// =========================
+import { 
+  getFirestore, 
+  doc, 
+  setDoc, 
+  serverTimestamp,
+  collection,
+  query,
+  where,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
 // =========================
-// FIREBASE CONFIG
+// ANALYTICS (OPTIONAL)
 // =========================
-const firebaseConfig = {
-  apiKey: "AIzaSyDDzHoSBLkVUJnRVlpYXP0GG6C_-kOW8nM",
-  authDomain: "salitang-ina.firebaseapp.com",
-  projectId: "salitang-ina",
-  storageBucket: "salitang-ina.firebasestorage.app",
-  messagingSenderId: "385948759038",
-  appId: "1:385948759038:web:df79300af571e95a7b06af",
-  measurementId: "G-JJCR574XB9"
-};
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
 
 // =========================
 // INITIALIZE FIREBASE
 // =========================
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
+// =========================
+// HEADER AUTH STATE TOGGLE
+// =========================
+function updateHeader(user) {
+  const loginLink = document.querySelector(".login-link");
+  const signupLink = document.querySelector(".signup-link");
+  const profileLink = document.querySelector(".profile-link");
+  const logoutLink = document.querySelector(".logout-link");
+
+  if (!loginLink || !signupLink || !profileLink || !logoutLink) return;
+
+  if (user) {
+    loginLink.style.display = "none";
+    signupLink.style.display = "none";
+    profileLink.style.display = "inline-block";
+    logoutLink.style.display = "inline-block";
+
+    logoutLink.onclick = () => {
+      signOut(auth)
+        .then(() => {
+          alert("Logged out ✅");
+          window.location.reload();
+        })
+        .catch(err => console.error(err));
+    };
+  } else {
+    loginLink.style.display = "inline-block";
+    signupLink.style.display = "inline-block";
+    profileLink.style.display = "none";
+    logoutLink.style.display = "none";
+  }
+}
+
+// Listen for Firebase auth state changes
+onAuthStateChanged(auth, updateHeader);
 
 // =========================
-// LOGIN
+// LOGIN (BY USERNAME)
 // =========================
-
 const loginForm = document.getElementById("login-form");
 
 if (loginForm) {
-  loginForm.addEventListener("submit", (e) => {
+  loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("login-username").value;
+    const password = document.getElementById("login-password").value;
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        alert("Logged in ✅");
-        window.location.href = "../index.html";
-      })
-      .catch(() => {
-        alert("Invalid email or password ❌");
-      });
+    try {
+      // Lookup username in Firestore
+      const usersRef = collection(db, "users");
+      const q = query(usersRef, where("username", "==", username));
+      const querySnapshot = await getDocs(q);
+
+      if (querySnapshot.empty) {
+        alert("Username not found ❌");
+        return;
+      }
+
+      const userData = querySnapshot.docs[0].data();
+      const email = userData.email; // get email associated with username
+
+      // Sign in with the retrieved email
+      await signInWithEmailAndPassword(auth, email, password);
+
+      alert("Logged in ✅");
+      window.location.href = "../index.html";
+
+    } catch (error) {
+      console.error(error);
+      alert("Invalid username or password ❌");
+    }
   });
 }
-
-
 
 // =========================
 // SIGNUP
-// =========================    
+// =========================
 const signupForm = document.getElementById("signup-form");
 
 if (signupForm) {
-  signupForm.addEventListener("submit", (e) => {
+  signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        alert("Account created 🎉");
-        window.location.href = "login.html";
-      })
-      .catch((error) => {
-        alert(error.message);
+    if (password !== confirmPassword) {
+      alert("Passwords do not match ❌");
+      return;
+    }
+
+    try {
+      // Ensure username is unique
+      const usersRef = collection(db, "users");
+      const q = query(usersRef, where("username", "==", username));
+      const querySnapshot = await getDocs(q);
+
+      if (!querySnapshot.empty) {
+        alert("Username already taken ❌");
+        return;
+      }
+
+      // Create user with email & password
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Create Firestore profile
+      await setDoc(doc(db, "users", user.uid), {
+        username: username,
+        email: email,
+        role: "user",
+        createdAt: serverTimestamp()
       });
+
+      alert("Account created 🎉");
+      window.location.href = "login.html";
+
+    } catch (error) {
+      console.error(error);
+      alert(error.message);
+    }
   });
 }
-
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    console.log("Logged in as:", user.email);
-  } else {
-    console.log("Not logged in");
-  }
-});
-
