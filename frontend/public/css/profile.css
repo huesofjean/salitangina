@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap');
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+    --bg-main: #ffffff;
+    --text-main: #1c1c1c;
+    --accent: #BFA47B;
+    --profilecard-bg: #fff4ea;
+    --input-bg: #fff;
+    --input-border: #d8c4b6;
+    --button-bg: var(--accent);
+    --button-text: #fff;
+}
+
+body.dark {
+    --bg-main: #121212;
+    --text-main: #eaeaea;
+    --accent: #f0b386;
+    --profilecard-bg: #3a352d6b;
+    --input-bg: #2a2a2a;
+    --input-border: #555;
+    --button-bg: var(--accent);
+    --button-text: #121212;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Kadwa', serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
+.profile-main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    flex: 1;
+}
+
+.profile-card {
+    background-color: var(--profilecard-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-card img#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+.profile-card input[type="text"],
+.profile-card textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    font-family: 'Kadwa', serif;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.profile-card input[type="file"] {
+    margin-top: 0.5rem;
+}
+
+.profile-card button#save-profile {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.profile-card button#save-profile:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HEADINGS & TEXT
+========================= */
+.profile-card h3 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 1.5rem;
+}
+
+.profile-card p {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .profile-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .profile-card img#profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Salitang-Ina</title>
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div id="layout-container"></div>
+        
+        <div class="main-content profile-main">
+            <h2>User Profile</h2>
+            <div class="profile-card">
+                <img id="profile-pic" src="../images/default-profile.png" alt="Profile Picture" style="width:150px;height:150px;border-radius:50%;">
+                
+                <label for="profile-pic-input">Change Profile Picture:</label>
+                <input type="file" id="profile-pic-input" accept="image/*">
+
+                <h3>
+                    Username: 
+                    <input type="text" id="username" placeholder="Enter username">
+                </h3>
+
+                <p>
+                    Email: <span id="email">user@example.com</span>
+                </p>
+
+                <p>
+                    Bio: <br>
+                    <textarea id="bio" rows="4" cols="40" placeholder="Write something about yourself..."></textarea>
+                </p>
+
+                <button id="save-profile">Save Changes 💾</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="coder">
+                <h4>Mga Programmer</h4>
+                <ul class="names">
+                    <li>Brian Ezekiel Vitan</li>
+                    <li>Johnzel Isaiah Zamora</li>
+                </ul>
+            </div>
+            <div class="designer">
+                <h4>Mga Designer</h4>
+                <ul class="names">
+                    <li>Nina Amanda Ramon</li>
+                    <li>Janna Danelle Ramirez</li>
+                </ul>
+            </div>
+            <div class="researcher">
+                <h4>Mga Mananaliksik</h4>
+                <ul class="names">
+                    <li>Dana Isabelle Agapay</li>
+                    <li>Madison Lee Bascuguin</li>
+                    <li>Nina Amanda Ramon</li>
+                    <li>Janna Danelle Ramirez</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/profilepage.js"></script>
+    <script type="module" src="../js/layout.js"></script>
+    <script type="module" src="../js/header.js"></script>
+</body>
+</html>

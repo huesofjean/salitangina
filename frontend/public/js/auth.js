@@ -47,6 +47,11 @@ const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
 // =========================
+// DEFAULT PROFILE PICTURE
+// =========================
+const DEFAULT_PFP = "../../assets/defaultpfp.jpg";
+
+// =========================
 // HEADER AUTH STATE TOGGLE
 // =========================
 function updateHeader(user) {
@@ -112,7 +117,7 @@ if (loginForm) {
       await signInWithEmailAndPassword(auth, email, password);
 
       alert("Logged in ✅");
-      window.location.href = "../index.html";
+      window.location.href = "index.html";
 
     } catch (error) {
       console.error(error);
@@ -155,11 +160,12 @@ if (signupForm) {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Create Firestore profile
+      // Create Firestore profile with default profile picture
       await setDoc(doc(db, "users", user.uid), {
         username: username,
         email: email,
         role: "user",
+        profilePic: DEFAULT_PFP, // <-- default profile pic added here
         createdAt: serverTimestamp()
       });
 
@@ -172,3 +178,8 @@ if (signupForm) {
     }
   });
 }
+
+// ------------------------
+// EXPORT AUTH & DB
+// ------------------------
+export { auth, db };

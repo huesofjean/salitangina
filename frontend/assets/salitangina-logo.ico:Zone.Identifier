@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/0ca36622-f1ad-423e-ac0c-3f431da8d1dd/salitangina-logo.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20260111%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20260111T072323Z&X-Amz-Expires=86400&X-Amz-Signature=cc269a67bb733bdcf151ffc43182f92567aa612bb264aeebe870a612fb3d5f30&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22salitangina-logo.ico%22&response-content-type=image%2Fvnd.microsoft.icon&x-id=GetObject

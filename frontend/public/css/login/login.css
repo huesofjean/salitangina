@@ -1,6 +1,27 @@
 /* =========================
+   THEME VARIABLES (LOGIN)
+========================= */
+:root {
+    --login-card-bg: #d6d5d2;
+    --login-text: #000000;
+    --login-border: #aaaaaa;
+    --login-accent: #BFA47B;
+    --login-btn-hover: #a79068;
+    --login-link: #000000;
+}
+
+body.dark {
+    --login-card-bg: #2a2a2a;
+    --login-text: #eaeaea;
+    --login-border: #555555;
+    --login-accent: #d4b98c;
+    --login-btn-hover: #bfa47b;
+    --login-link: #eaeaea;
+}
+
+/* =========================
    LOGIN PAGE LAYOUT
-   ========================= */
+========================= */
 .login-wrapper {
     position: relative; /* allows ::before */
     min-height: calc(100vh - 180px);
@@ -24,13 +45,19 @@
     z-index: 0;
 }
 
+/* Dark mode background tweak */
+body.dark .login-wrapper::before {
+    opacity: 0.25;
+}
+
 /* =========================
    LOGIN CARD
-   ========================= */
+========================= */
 .login-card {
     position: relative; /* keeps card above bg */
     z-index: 1;
-    background-color: #d6d5d2;
+    background-color: var(--login-card-bg);
+    color: var(--login-text);
     padding: 2rem 2.5rem;
     border-radius: 1rem;
     width: 100%;
@@ -43,11 +70,12 @@
     font-family: "Alike Angular", serif;
     text-align: center;
     margin-bottom: 1.5rem;
+    color: var(--login-text);
 }
 
 /* =========================
    FORM
-   ========================= */
+========================= */
 .login-form {
     display: flex;
     flex-direction: column;
@@ -56,18 +84,25 @@
 
 .login-form label {
     font-size: 0.95rem;
+    color: var(--login-text);
 }
 
 .login-form input {
     padding: 0.6rem 0.8rem;
     border-radius: 0.6rem;
-    border: 1px solid #aaa;
+    border: 1px solid var(--login-border);
     font-family: 'Kadwa', serif;
+    color: var(--login-text);
+    background-color: transparent;
+}
+
+.login-form input::placeholder {
+    color: var(--login-border);
 }
 
 .login-form input:focus {
     outline: none;
-    border-color: #BFA47B;
+    border-color: var(--login-accent);
 }
 
 /* BUTTON */
@@ -76,27 +111,29 @@
     padding: 0.6rem;
     border: none;
     border-radius: 0.8rem;
-    background-color: #BFA47B;
+    background-color: var(--login-accent);
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .login-form button:hover {
-    background-color: #a79068;
+    background-color: var(--login-btn-hover);
 }
 
 /* =========================
    FOOTER TEXT
-   ========================= */
+========================= */
 .login-footer {
     text-align: center;
     margin-top: 1rem;
     font-size: 0.9rem;
+    color: var(--login-text);
 }
 
 .login-footer a {
-    color: #000;
+    color: var(--login-link);
     font-weight: 700;
     text-decoration: none;
 }
@@ -107,7 +144,7 @@
 
 /* =========================
    RESPONSIVE
-   ========================= */
+========================= */
 @media (max-width: 500px) {
     .login-card {
         padding: 1.5rem;
