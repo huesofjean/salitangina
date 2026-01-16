@@ -37,7 +37,7 @@ body.dark {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("../../../assets/librarybg.jpg");
+    background-image: url("../../assets/librarybg.jpg");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;

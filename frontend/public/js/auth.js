@@ -49,7 +49,7 @@ const analytics = getAnalytics(app);
 // =========================
 // DEFAULT PROFILE PICTURE
 // =========================
-const DEFAULT_PFP = "../../assets/defaultpfp.jpg";
+const DEFAULT_PFP = "../assets/defaultpfp.jpg";
 
 // =========================
 // HEADER AUTH STATE TOGGLE
