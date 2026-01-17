@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+  <title>Library - Salitang-Ina</title>
+  <link rel="stylesheet" href="../css/library.css">
+  <link rel="stylesheet" href="../css/homepage.css">
+  
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="layout-container"></div>
+
+    <main class="main-content library-main">
+      <h2>Library of Research Papers 📚</h2>
+
+      <!-- Filters -->
+      <div class="filters">
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="Wika">Wika</option>
+          <option value="Matematika">Matematika</option>
+          <option value="Agham">Agham</option>
+          <option value="Makataong Agham">Makataong Agham</option>
+          <option value="Sikolohiya">Sikolohiya</option>
+        </select>
+
+        <select id="language-filter">
+          <option value="all">All Languages</option>
+          <option value="Filipino">Filipino</option>
+          <option value="English">English</option>
+          <option value="Ilocano">Ilocano</option>
+          <option value="Cebuano">Cebuano</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+
+      <!-- Cards container -->
+      <div id="library-cards" class="cards-container"></div>
+    </main>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script type="module" src="../js/library.js"></script>
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/profilepage.js"></script>
+  <script type="module" src="../js/layout.js"></script>
+  <script type="module" src="../js/footer.js"></script>
+</body>
+</html>

@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salitang-Ina</title>
     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/homepage.css">    
+    <link rel="stylesheet" href="../css/about.css">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-       <!-- index.html, about.html, etc. -->
-        <div id="layout-container"></div>
+    <!-- HEADER + NAV -->
+    <div id="layout-container"></div>
 
-        <div class="main-content">
-            <aside class="left-sidebar">
-                <h2>Mga Kagamitan</h2>
-                <hr>
-                <ul>
-                    <li><a href="#">Bookmarks</a></li>
-                    <li><a href="#">Kasalukuyang Binabasa</a></li>
-                    <li><a href="#">Anotasyon</a></li>
-                    <li><a href="#">AI Tools</a></li>
-                </ul>
-            </aside>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <h1>Maligayang Pagdating sa Salitang-Ina</h1>
 
-            <aside class="right-sidebar">
-                <article class="right-content" id="description">
-                    <h3>DESKRIPSYON</h3>
-                    <div class="right-textbox">
-                        <p>Ang <b>SalitangIna</b> ay isang makabagong plataporma para sa maka-Pilipinong pananaliksik. Dito, maaaring mag-upload at magbahagi ng pag-aaral ang mga iskolar, guro, estudyante, at iba pang mananaliksik mula sa iba’t ibang panig ng bansa. Layunin nitong palaganapin ang kulturang pananaliksik na nakaugat sa kaalamang Pilipino at magbigay ng madaling akses sa mapagkakatiwalaang sanggunian.</p>
-                    </div>
-            </aside>
-        </div>
-    </div>  
+        <p>
+            Ang <strong>Salitang-Ina</strong> ay isang plataporma para sa maka-Pilipinong pananaliksik.
+            Maaaring mag-upload at magbahagi ng pag-aaral ang mga estudyante, guro, at mananaliksik
+            mula sa iba’t ibang panig ng bansa.
+        </p>
 
+        <p>
+            Layunin nitong gawing accessible ang kaalaman, palaganapin ang kulturang pananaliksik,
+            at magbigay ng mapagkakatiwalaang sanggunian.
+        </p>
+
+        <p>
+            Sa kasalukuyan, ito ay isang <strong>prototype</strong> lamang.
+            Walang opisyal na donation o monetization system, ngunit bukas kami sa feedback at
+            suhestiyon upang mapabuti ang platform.
+        </p>
+    </main>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <div class="coder">
@@ -46,6 +47,7 @@
                     <li>Johnzel Isaiah Zamora</li>
                 </ul>
             </div>
+
             <div class="designer">
                 <h4>Mga Designer</h4>
                 <ul class="names">
@@ -53,6 +55,7 @@
                     <li>Janna Danelle Ramirez</li>
                 </ul>
             </div>
+
             <div class="researcher">
                 <h4>Mga Mananaliksik</h4>
                 <ul class="names">
@@ -62,6 +65,7 @@
                     <li>Divine Joyce Domingo</li>
                 </ul>
             </div>
+
             <div class="footer-section">
                 <h4><a href="#"><b>Makipag-ugnayan sa amin</b></a></h4>
                 <h4><a href="#"><b>Mga Tuntunin at Kundisyon</b></a></h4>
@@ -72,7 +76,6 @@
 
     <!-- Tap-friendly dropdown JS -->
     <script>
-        // Only on small screens
         const dropdownWrappers = document.querySelectorAll('.dropdown-wrapper');
         dropdownWrappers.forEach(wrapper => {
             const link = wrapper.querySelector('.dropdown-category');
@@ -81,9 +84,11 @@
                 wrapper.classList.toggle('active');
             });
         });
-        </script>
+    </script>
+
     <script type="module" src="../js/auth.js"></script>
     <script type="module" src="../js/profilepage.js"></script>
     <script type="module" src="../js/layout.js"></script>
-    </body>
+    <script type="module" src="../js/footer.js"></script>
+</body>
 </html>

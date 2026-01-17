@@ -1,0 +1,114 @@
+/* =========================
+   ROOT VARIABLES (MATCH PROFILE)
+========================= */
+:root {
+    --bg-main: #ffffff;
+    --text-main: #1c1c1c;
+    --accent: #BFA47B;
+    --card-bg: #fff4ea;
+    --input-bg: #fff;
+    --input-border: #d8c4b6;
+    --button-bg: var(--accent);
+    --button-text: #fff;
+}
+
+body.dark {
+    --bg-main: #121212;
+    --text-main: #eaeaea;
+    --accent: #f0b386;
+    --card-bg: #3a352d6b;
+    --input-bg: #2a2a2a;
+    --input-border: #555;
+    --button-bg: var(--accent);
+    --button-text: #121212;
+}
+
+/* =========================
+   UPLOAD MAIN LAYOUT
+========================= */
+.upload-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    flex: 1;
+}
+
+.upload-main h2 {
+    margin-bottom: 1.5rem;
+    font-family: 'Aclonica', sans-serif;
+}
+
+/* =========================
+   UPLOAD CARD
+========================= */
+.upload-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+.upload-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.upload-field label {
+    font-weight: 600;
+}
+
+.upload-field input,
+.upload-field select {
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    font-family: 'Kadwa', serif;
+    font-size: 1rem;
+}
+
+.upload-field small {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+#upload-submit {
+    margin-top: 1rem;
+    align-self: center;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.7rem 1.6rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#upload-submit:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .upload-card {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+}

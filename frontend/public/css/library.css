@@ -1,0 +1,127 @@
+:root {
+    --bg-main: #ffffff;
+    --text-main: #1c1c1c;
+    --accent: #BFA47B;
+    --profilecard-bg: #fff4ea;
+    --input-bg: #fff;
+    --input-border: #d8c4b6;
+    --button-bg: var(--accent);
+    --button-text: #fff;
+}
+
+body.dark {
+    --bg-main: #121212;
+    --text-main: #eaeaea;
+    --accent: #f0b386;
+    --profilecard-bg: #3a352d6b;
+    --input-bg: #2a2a2a;
+    --input-border: #555;
+    --button-bg: var(--accent);
+    --button-text: #121212;
+}
+
+.library-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    flex: 1;
+}
+
+/* Cards container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Individual paper cards */
+.paper-card {
+    background-color: var(--profilecard-bg);
+    padding: 1.8rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Headings & text */
+.paper-card h3 {
+    font-family: 'Aclonica', sans-serif;
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+}
+
+.paper-card p {
+    font-family: 'Kadwa', serif;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.paper-card .abstract {
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* PDF download button */
+.paper-card .download-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.paper-card .download-btn:hover {
+    transform: translateY(-2px);
+    background-color: #a8854e; /* slightly darker accent */
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    font-family: 'Kadwa', serif;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .paper-card {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+}

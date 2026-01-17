@@ -62,11 +62,15 @@ function updateHeader(user) {
 
   if (!loginLink || !signupLink || !profileLink || !logoutLink) return;
 
-  if (user) {
+if (user) {
     loginLink.style.display = "none";
     signupLink.style.display = "none";
     profileLink.style.display = "inline-block";
     logoutLink.style.display = "inline-block";
+
+    // Show the Upload button for logged-in users
+    const uploadLink = document.querySelector(".upload-link");
+    if (uploadLink) uploadLink.style.display = "inline-block";
 
     logoutLink.onclick = () => {
       signOut(auth)
@@ -76,12 +80,17 @@ function updateHeader(user) {
         })
         .catch(err => console.error(err));
     };
-  } else {
+} else {
     loginLink.style.display = "inline-block";
     signupLink.style.display = "inline-block";
     profileLink.style.display = "none";
     logoutLink.style.display = "none";
-  }
+
+    // Hide the Upload button for non-logged-in users
+    const uploadLink = document.querySelector(".upload-link");
+    if (uploadLink) uploadLink.style.display = "none";
+}
+
 }
 
 // Listen for Firebase auth state changes

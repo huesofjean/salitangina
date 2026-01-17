@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Work | Salitang-Ina</title>
+
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/upload.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike+Angular&family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<script type="module" src="../js/rolelock.js"></script>
+
+<div class="wrapper">
+
+    <div id="layout-container"></div>
+
+    <div class="main-content upload-main">
+        <h2>Mag-upload ng Likha</h2>
+
+        <form id="upload-form" class="upload-card">
+
+            <!-- FILE -->
+            <div class="upload-field">
+                <label for="pdf-file">PDF File *</label>
+                <input type="file" id="pdf-file" accept="application/pdf" required>
+            </div>
+
+            <!-- TITLE -->
+            <div class="upload-field">
+                <label for="work-title">Pamagat *</label>
+                <input
+                    type="text"
+                    id="work-title"
+                    placeholder="Ilagay ang pamagat ng likha"
+                    required
+                >
+            </div>
+
+            <!-- CREATORS -->
+            <div class="upload-field">
+                <label for="creators">Creator(s) *</label>
+                <input
+                    type="text"
+                    id="creators"
+                    placeholder="Hal. Juan Dela Cruz, Maria Santos"
+                    required
+                >
+            </div>
+
+            <!-- CATEGORY -->
+            <div class="upload-field">
+                <label for="category">Kategorya *</label>
+                <select id="category" required>
+                    <option value="">-- Pumili --</option>
+                    <option>Wika</option>
+                    <option>Matematika</option>
+                    <option>Agham</option>
+                    <option>Makataong Agham</option>
+                    <option>Sikolohiya</option>
+                </select>
+            </div>
+
+            <!-- LANGUAGE -->
+            <div class="upload-field">
+                <label for="language">Wika *</label>
+                <select id="language" required>
+                    <option value="">-- Pumili --</option>
+                    <option>Filipino</option>
+                    <option>English</option>
+                    <option>Cebuano</option>
+                    <option>Ilocano</option>
+                    <option>Iba pa</option>
+                </select>
+            </div>
+
+            <!-- TAGS -->
+            <div class="upload-field">
+                <label for="tags">Mga Tag</label>
+                <input
+                    type="text"
+                    id="tags"
+                    placeholder="Hal. pananaliksik, edukasyon, kultura"
+                >
+                <small>
+                    Maglalagay ng bagong tag kung wala pang umiiral.
+                </small>
+            </div>
+
+            <!-- SUBMIT -->
+            <button type="submit" id="upload-submit">
+                I-upload ang Likha 📄
+            </button>
+
+        </form>
+    </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script type="module" src="../js/layout.js"></script>
+<script type="module" src="../js/footer.js"></script>
+<script type="module" src="../js/upload-guard.js"></script>
+<script type="module" src="../js/upload.js"></script>
+
+
+</body>
+</html>
