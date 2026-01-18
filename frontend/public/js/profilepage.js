@@ -5,7 +5,7 @@ import { auth, db } from "./auth.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 import { doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
-const DEFAULT_PFP = "../images/default-profile.png";
+const DEFAULT_PFP = "/images/default-profile.png";
 
 document.addEventListener("DOMContentLoaded", () => {
   const usernameInput = document.getElementById("username");

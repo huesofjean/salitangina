@@ -2,7 +2,7 @@ import { auth, db } from "./auth.js";
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 import { doc, onSnapshot } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
-const DEFAULT_PFP = "../assets/defaultpfp.jpg";
+const DEFAULT_PFP = "/assets/defaultpfp.jpg";
 
 export function initHeader() {
   const loginLink = document.querySelector(".login-link");

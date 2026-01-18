@@ -5,7 +5,7 @@ const papers = [
     language: "Filipino",
     tags: ["COVID", "Pandemya", "Disiplina"],
     abstract: "Isang pagsusuri sa impluwensiya ng pandemya sa paghubog ng disiplina ng mga estudyante ng Paco Catholic School (PCS).",
-    pdf: "../pdfs/impluwensiya-ng-pandemya.pdf"
+    pdf: "/pdfs/impluwensiya-ng-pandemya.pdf"
   },
   {
     title: "EPEKTO NG “TIKTOK” SA PAG-AARAL NG MGA GRADE 11",
@@ -13,7 +13,7 @@ const papers = [
     language: "Filipino",
     tags: ["Edukasyon", "TikTok"],
     abstract: "Isang pag-aaral tungkol sa mga negatibong epekto ng TikTok sa mga kabataan pagdating sa kanilang edukasyon.",
-    pdf: "../pdfs/tiktok-sa-pagaaral.pdf"
+    pdf: "/pdfs/tiktok-sa-pagaaral.pdf"
   },
 ];
 
