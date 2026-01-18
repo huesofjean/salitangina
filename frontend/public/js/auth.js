@@ -126,7 +126,7 @@ if (loginForm) {
       await signInWithEmailAndPassword(auth, email, password);
 
       alert("Logged in ✅");
-      window.location.href = "index.html";
+      window.location.href = "/html/index.html";
 
     } catch (error) {
       console.error(error);

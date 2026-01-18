@@ -5,7 +5,7 @@ async function loadLayout() {
   // ------------------------
   // Load HTML
   // ------------------------
-  const response = await fetch("components/layout.html");
+  const response = await fetch("/html/components/layout.html");
   const html = await response.text();
   container.innerHTML = html;
   // AFTER container.innerHTML = html;
@@ -83,3 +83,4 @@ import("./header.js").then(module => {
 // Call after DOM ready
 // ------------------------
 document.addEventListener("DOMContentLoaded", loadLayout);
+document.dispatchEvent(new Event("layout-ready"));

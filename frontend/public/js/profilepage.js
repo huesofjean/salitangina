@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(auth, async (user) => {
     if (!user) {
       alert("Please log in first!");
-      window.location.href = "login.html";
+      window.location.href = "/html/login.html";
       return;
     }
 
